@@ -51,7 +51,7 @@ router.post('/order', async (req, res) => {
 
         // Razorpay order creation
         const options = {
-            amount: total * 10, // Convert to paise
+            amount: total * 100, // Convert to paise
             currency: "INR",
             receipt: newOrder._id.toString(), // Use MongoDB's _id as the receipt
         };
